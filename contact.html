@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+       
+        <li><a href="extra.html">Extras</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <form id="contact" action="message.php" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+
+    <button type="submit">Submit</button>
+</form>
+
+
+  <!-- Email Link -->
+  <a class="email-link" href="mailto:swagneupane@gmail.com">Send an Email</a>
+  <p style="text-align: center;">Connect with me on 
+    <a href="https://www.linkedin.com" target="_blank" class="linkedin-link">LinkedIn</a>.
+  </p>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        
+      
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="calculator">
+      <h1>Calculator App</h1>
+      <div id="calculator">
+        <input type="text" id="display">
+        <div class="buttons">
+          <!-- Number Buttons -->
+          <button onclick="appendNumber()">7</button>
+          <button onclick="appendNumber()">8</button>
+          <button onclick="appendNumber()">9</button>
+          <button onclick="chooseOperation('/')">/</button>
+          
+          <button onclick="appendNumber()">4</button>
+          <button onclick="appendNumber()">5</button>
+          <button onclick="appendNumber()">6</button>
+          <button onclick="chooseOperation('*')">*</button>
+          
+          <button onclick="appendNumber()">1</button>
+          <button onclick="appendNumber()">2</button>
+          <button onclick="appendNumber()">3</button>
+          <button onclick="chooseOperation()">-</button>
+          
+          <button onclick="appendNumber()">0</button>
+          <button onclick="appendNumber('.')">.</button>
+          <button onclick="compute()">=</button>
+          <button onclick="chooseOperation('+')">+</button>
+          
+          <!-- Clear Button -->
+          <button onclick="clearDisplay()">C</button>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
