@@ -1,100 +1,39 @@
-// Form Validation
-if (document.querySelector("#contact")) {
-  document.querySelector("#contact").addEventListener("submit", function (event) {
-    const name = document.querySelector("#name").value.trim();
-    const email = document.querySelector("#email").value.trim();
-    const message = document.querySelector("#message").value.trim();
-
-    if (!name || !email || !message) {
-      event.preventDefault();
-      alert("Please fill in all required fields!");
-    } else {
-      alert("Form submitted successfully!");
-    }
-  });
-}
-
-// Calculator Functionality
-if (document.querySelector("#calculator")) {
-  let currentOperand = '';
-  let previousOperand = '';
-  let operation = undefined;
-
-  function appendNumber(number) {
-    // Prevent multiple dots in the number
-    if (number === '.' && currentOperand.includes('.')) return;
-
-    currentOperand = currentOperand.toString() + number.toString(); // Append the number
-    updateDisplay();
-  }
-
-  function chooseOperation(op) {
-    if (currentOperand === '') return; // Ignore if no number is entered
-    if (previousOperand !== '') {
-      compute(); // Compute the result before choosing a new operation
-    }
-    operation = op;
-    previousOperand = currentOperand;
-    currentOperand = '';
-  }
-
+"use strict";
+const calculator = document.querySelector("#calculator");
+if (calculator) {
+  const display = document.querySelector("#display");
+  let current = "0", previous = null, operator = null, replace = true;
+  const render = () => { display.textContent = current; };
+  function clear() { current = "0"; previous = null; operator = null; replace = true; }
   function compute() {
-    let computation;
-    const prev = parseFloat(previousOperand);
-    const current = parseFloat(currentOperand);
-
-    if (isNaN(prev) || isNaN(current)) return; // Ignore if operands are invalid
-
-    switch (operation) {
-      case '+':
-        computation = prev + current;
-        break;
-      case '-':
-        computation = prev - current;
-        break;
-      case '*':
-        computation = prev * current;
-        break;
-      case '/':
-        computation = prev / current;
-        break;
-      default:
-        return;
+    if (operator === null || replace) return;
+    const a = previous, b = Number(current);
+    const result = operator === "+" ? a + b : operator === "-" ? a - b : operator === "*" ? a * b : a / b;
+    current = Number.isFinite(result) ? String(Number(result.toPrecision(12))) : "Cannot divide by zero";
+    previous = null; operator = null; replace = true;
+  }
+  function input(key) {
+    if (key === "C") clear();
+    else if (/^[0-9.]$/.test(key)) {
+      if (replace) { current = "0"; replace = false; }
+      if (key === ".") { if (!current.includes(".")) current += "."; }
+      else if (current.length < 16) current = current === "0" ? key : current + key;
+    } else if (key === "=") compute();
+    else if (["+", "-", "*", "/"].includes(key)) {
+      if (operator && !replace) compute();
+      if (Number.isFinite(Number(current))) { previous = Number(current); operator = key; replace = true; }
     }
-
-    currentOperand = computation; // Set the result as the current operand
-    operation = undefined;
-    previousOperand = '';
-    updateDisplay();
+    render();
   }
-
-  function clearDisplay() {
-    currentOperand = '';
-    previousOperand = '';
-    operation = undefined;
-    updateDisplay();
-  }
-
-  function updateDisplay() {
-    const display = document.getElementById('display');
-    display.value = currentOperand; // Show the current operand
-  }
-
-  // Attach event handlers only to calculator buttons
-  const buttons = document.querySelectorAll("#calculator .buttons button");
-  buttons.forEach(button => {
-    button.addEventListener("click", function () {
-      const value = this.innerText;
-
-      if (!isNaN(value) || value === '.') {
-        appendNumber(value); // Append number or dot
-      } else if (['+', '-', '*', '/'].includes(value)) {
-        chooseOperation(value); // Choose operation
-      } else if (value === '=') {
-        compute(); // Perform computation
-      } else if (value === 'C') {
-        clearDisplay(); // Clear the display
-      }
-    });
+  calculator.addEventListener("click", event => {
+    const button = event.target.closest("button[data-key]");
+    if (button) input(button.dataset.key);
+  });
+  document.addEventListener("keydown", event => {
+    if (event.ctrlKey || event.metaKey || event.altKey || /INPUT|TEXTAREA|SELECT/.test(event.target.tagName)) return;
+    // Let Enter activate a focused link or button through its native click behavior.
+    if (event.key === "Enter" && event.target.closest("a, button")) return;
+    const key = event.key === "Enter" ? "=" : event.key === "Escape" ? "C" : event.key;
+    if (/^[0-9.+*/=\-]$/.test(key) || key === "C") { event.preventDefault(); input(key); }
   });
 }
