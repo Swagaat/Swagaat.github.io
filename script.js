@@ -37,3 +37,16 @@ if (calculator) {
     if (/^[0-9.+*/=\-]$/.test(key) || key === "C") { event.preventDefault(); input(key); }
   });
 }
+
+const copyEmail = document.querySelector('[data-copy-email]');
+if (copyEmail) {
+  copyEmail.addEventListener('click', async () => {
+    const status = document.querySelector('#copy-status');
+    try {
+      await navigator.clipboard.writeText('swagneupane@gmail.com');
+      status.textContent = 'Email address copied.';
+    } catch {
+      status.textContent = 'Please select and copy the email address above, or use the email link.';
+    }
+  });
+}

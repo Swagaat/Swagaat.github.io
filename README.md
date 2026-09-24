@@ -1,35 +1,42 @@
-# Personal Website — Swagat Neupane
+# Swagat Neupane — Personal Portfolio
 
-An early personal website built with HTML, CSS, and JavaScript. The repository contains a home page, an about page, a portfolio page, contact pages, and an extras page with calculator functionality.
+A static portfolio and Nepal showcase built with HTML, CSS, JavaScript, and SVG. Hosted on GitHub Pages at https://swagaat.github.io/.
 
 ## Run locally
 
 ```bash
-git clone https://github.com/Swagaat/Swagaat.github.io.git
-cd Swagaat.github.io
-python3 -m http.server 8000
+python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
-Open `http://localhost:8000` in a browser. No frontend build step is required.
+Open http://127.0.0.1:8000. No install or build step is required.
 
-## Main files
+## Pages
 
-- `index.html`: home page.
-- `about.html` and `portfolio.html`: background and project information.
-- `contact.html`: contact interface.
-- `extra.html`: additional interactive content.
-- `styles.css`: styling.
-- `script.js`: calculator logic and client-side form validation.
+- `index.html`: introduction, role interests, and featured work.
+- `about.html`: background, education, and tools.
+- `portfolio.html`: project directory.
+- `case-*.html`: four project case studies, linked to demos and source.
+- `contact.html`: direct email, copy-address button, GitHub, and existing résumé link.
+- `extra.html`: keyboard-accessible basic calculator.
+- `nepal.html`: illustrated Nepal showcase with filters and an interactive schematic map.
+- `WEB.html`: original geometry coursework and interactive spider-web model.
 
-## Scope and limitations
+Shared portfolio styles and behavior are in `styles.css` and `script.js`. Nepal uses `nepal.css` and `nepal.js`. `assets/` includes the original landscape illustration and screenshots of the working demos.
 
-This is a frontend learning project. Client-side validation and a success alert do not establish that a contact message has been delivered. The repository also contains a PHP contact file; the local static server above does not execute PHP.
+## Editing content
 
-The portfolio copy and project descriptions reflect earlier coursework and need an update before this site becomes the primary destination for job applications. Browser behavior and message delivery have not been verified as part of the documentation refresh.
+Update the introduction in `index.html`, background in `about.html`, and contact links in `contact.html`. Keep résumé links in contact and portfolio pages consistent. Case-study text describes demonstrated behavior, without invented employment history or performance claims.
 
-## Planned improvements
+To add personal Nepal photography, add optimized images to `assets/`, supply meaningful alt text and captions in `nepal.html`, and credit any photographer other than yourself. Current imagery consists of illustrations and project screenshots; it is not presented as travel photography.
 
-- Replace generic project entries with specific case studies and repository links.
-- Update the introduction to reflect current applied AI and software engineering work.
-- Verify mobile layout, keyboard navigation, and contact behavior.
-- Add project screenshots after the corresponding demos have been checked.
+The map is an illustrated overview, not a navigational map. Place definitions are in `nepal.js`. All place cards remain available without JavaScript. Animations respect reduced-motion settings.
+
+## Publishing
+
+GitHub Pages publishes from `main`, root folder. Commit and push the intended changes, then check the Pages deployment in the repository's Actions tab.
+
+## Scope
+
+The current résumé link is preserved from the original site and needs the owner's confirmation that it is current. Personal Nepal photographs, a first-hand story, and a verified LinkedIn profile are awaiting owner input.
+
+The site uses direct email; it does not submit or deliver contact messages through a backend. Legacy files under `images/` are retained for history and are not the active contact flow. GitHub Pages does not execute PHP.
