@@ -1,3 +1,429 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Swagat Neupane’s personal portfolio: web projects, programming experiments, and background."><meta name="theme-color" content="#153e35"><title>Home · Swagat Neupane</title><link rel="stylesheet" href="styles.css"><script src="script.js" defer></script></head>
-<body><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><a class="brand" href="index.html" aria-label="Swagat Neupane home">SN<span>.</span></a><nav aria-label="Main navigation"><a href="index.html" aria-current="page">Home</a><a href="about.html">About</a><a href="portfolio.html">Projects</a><a href="extra.html">Playground</a><a href="contact.html">Contact</a></nav></header><main id="main" tabindex="-1"><section class="hero"><div><p class="eyebrow">SWAGAT NEUPANE / PERSONAL PORTFOLIO</p><h1>Building for the web.<br>Exploring AI.</h1><p class="intro">I'm Swagat Neupane. I build websites and interactive tools, with a background in computer science coursework using Python, SQL, HTML, CSS, and JavaScript.</p><p class="role-note"><strong>Opportunities I’m interested in</strong><br>AI/ML Engineer · Forward Deployed Engineer · Full-Stack Software Engineer (AI)</p><div class="actions"><a class="button" href="portfolio.html">Explore my projects <span>↗</span></a><a class="text-link" href="about.html">More about me →</a></div></div><figure class="portrait"><img src="pp.jpg" alt="Swagat Neupane" width="600" height="720"><figcaption>A little curiosity. A lot to build.</figcaption></figure></section><section class="featured-project"><div><p class="eyebrow">FEATURED PROJECT / NEPAL</p><h2>A place close to home.<br>A project made to explore.</h2><p>A visual introduction to Nepal, with an interactive place explorer, illustrated landscapes, and stories about culture and food.</p><div class="actions"><a class="button" href="nepal.html">Explore Nepal ↗</a><a href="case-nepal.html">Read the case study →</a></div></div><a href="nepal.html" aria-label="Explore the Nepal project"><img src="assets/nepal-landscape.svg" width="1600" height="1000" alt="Illustrated Himalayan peaks and prayer flags" loading="lazy"></a></section><section class="section"><div class="section-heading"><h2>From ideas to experiments.</h2><a href="portfolio.html">All projects →</a></div><div class="grid"><article class="card"><p class="eyebrow">01 / WEB DEVELOPMENT</p><h3>A home on the web</h3><p>This portfolio brings together my background, coursework, and experiments in one place.</p><a href="case-portfolio.html">Read the case study →</a></article><article class="card"><p class="eyebrow">02 / JAVASCRIPT</p><h3>Small tools, practical lessons</h3><p>A browser calculator for exploring events, arithmetic, and interface state.</p><a href="case-calculator.html">See how it works →</a></article></div></section></main><footer><span>Swagat Neupane</span><span>Built with HTML, CSS &amp; JavaScript.</span><a href="https://github.com/Swagaat">GitHub ↗</a></footer></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Swagat Neupane · Software &amp; ML Engineer</title>
+  <meta name="description" content="Swagat Neupane is an entry-level software and machine learning engineer in Fremont, CA, focused on Python data work, careful model evaluation, and reproducible ML.">
+  <meta name="author" content="Swagat Neupane">
+  <link rel="canonical" href="https://swagaat.github.io/">
+  <meta name="theme-color" content="#f7f7f4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b100f" media="(prefers-color-scheme: dark)">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://swagaat.github.io/">
+  <meta property="og:title" content="Swagat Neupane · Software & ML Engineer">
+  <meta property="og:description" content="Python data work, careful model evaluation, and reproducible ML. Open to entry-level Software, AI, and ML Engineer roles.">
+  <meta property="og:image" content="https://swagaat.github.io/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Swagat Neupane — Software & ML Engineer">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // Apply the saved theme before first paint to avoid a flash.
+    document.documentElement.classList.add("js");
+    try { const t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+  <script src="script.js" defer></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Swagat Neupane",
+      "url": "https://swagaat.github.io/",
+      "jobTitle": "Software & Machine Learning Engineer",
+      "alumniOf": "San Francisco Bay University",
+      "address": { "@type": "PostalAddress", "addressLocality": "Fremont", "addressRegion": "CA", "addressCountry": "US" },
+      "sameAs": ["https://github.com/Swagaat"]
+    }
+  </script>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+      <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+      <symbol id="i-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+      <symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></symbol>
+      <symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.01"/></symbol>
+      <symbol id="i-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></symbol>
+      <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 14 4-4 3 3 5-6"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h11"/></symbol>
+      <symbol id="i-tool" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 13l-8 8-3-3 8-8M14.7 6.3 13 4.6a4 4 0 0 0-5.6 5.6l1.7 1.7"/><path d="m3 21 6-6"/></symbol>
+      <symbol id="i-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m2 9 10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5M22 9v6"/></symbol>
+      <symbol id="i-brief" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></symbol>
+    </defs>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="Swagat Neupane, back to top"><span class="brand-mark" aria-hidden="true">SN</span><span>Swagat Neupane</span></a>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation" data-nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-primary btn-sm" href="https://drive.google.com/file/d/1HO9i_AqHCOgrL9knAAbPDF6hSDjnwh7z/view?usp=sharing" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg><span class="resume-btn-label">Resume</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+        <button class="icon-button theme-toggle" type="button" data-theme-toggle aria-label="Switch color theme"><svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon"/></svg><svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun"/></svg></button>
+        <button class="icon-button menu-toggle" type="button" data-menu-toggle aria-controls="site-nav" aria-expanded="false" aria-label="Open menu"><svg class="icon icon-menu" aria-hidden="true"><use href="#i-menu"/></svg><svg class="icon icon-close" aria-hidden="true"><use href="#i-close"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- ================= Hero ================= -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div>
+          <p class="status-pill"><span class="status-dot" aria-hidden="true"></span>Open to entry-level SWE, AI &amp; ML Engineer roles</p>
+          <p class="hero-name">Hi, I'm <strong>Swagat Neupane</strong>, a software &amp; machine learning engineer.</p>
+          <h1 id="hero-title">I build ML models and test them against <em>honest baselines.</em></h1>
+          <p class="hero-intro">I'm a Computer Science graduate of San Francisco Bay University ('26), based in Fremont, CA. I work mostly in Python: cleaning messy data, engineering time-based features, and evaluating models chronologically so the results hold up on data the model hasn't seen.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">View my projects <svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></a>
+            <a class="btn btn-secondary" href="#contact">Contact me</a>
+          </div>
+          <div class="social-row">
+            <a href="https://github.com/Swagaat" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>github.com/Swagaat</a>
+            <a href="mailto:swagneupane@gmail.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>swagneupane@gmail.com</a>
+            <!-- Add LinkedIn here once the profile URL is confirmed:
+            <a href="https://www.linkedin.com/in/YOUR-HANDLE" target="_blank" rel="noopener">LinkedIn</a> -->
+          </div>
+        </div>
+
+        <figure class="eval-card reveal" aria-labelledby="eval-title" style="margin:0">
+          <div class="eval-card-bar" aria-hidden="true"><span class="window-dots"><i></i><i></i><i></i></span><span>restropilot / ml / evaluation</span></div>
+          <div class="eval-card-body">
+            <div class="eval-title"><h2 id="eval-title">Item-quantity forecast</h2><span class="tag-mono">test split</span></div>
+            <p class="eval-sub">Mean absolute error per scored item-day. Lower is better.</p>
+            <div class="metric">
+              <div class="metric-label"><span>Previous-week baseline</span><span>5.569</span></div>
+              <div class="metric-track"><div class="metric-fill" style="--w:100%"></div></div>
+            </div>
+            <div class="metric">
+              <div class="metric-label"><span>Random Forest (mine)</span><span>4.172</span></div>
+              <div class="metric-track"><div class="metric-fill is-accent" style="--w:74.9%"></div></div>
+            </div>
+            <dl class="eval-stats">
+              <div><dt>MAE change</dt><dd>−25.1%</dd></div>
+              <div><dt>WAPE</dt><dd>50.3→37.7%</dd></div>
+              <div><dt>Scored days</dt><dd>239</dd></div>
+            </dl>
+          </div>
+          <figcaption class="eval-note">Research model on historical data (test window Apr–Jul 2019, three items). Chronological split, settings chosen on validation only.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= About ================= -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-copy reveal">
+          <p class="kicker">About</p>
+          <h2 id="about-title">Data first, then models, then software people can rely on.</h2>
+          <p>I grew up in Nepal and came to the Bay Area to study computer science. Along the way I found that the part of ML I enjoy most is the unglamorous part: <strong>working out what the data actually says</strong> before trusting any number a model produces.</p>
+          <p>On my team capstone, <strong>RestroPilot</strong>, I own the machine-learning work. That means reconciling raw order exports, designing features that only use past information, comparing every model against a simple baseline, and packaging the result so the application can load it safely.</p>
+          <p>I'm looking for entry-level <strong>Software Engineer, AI Engineer, or ML Engineer</strong> roles. I'm also interested in forward-deployed and full-stack work involving AI.</p>
+          <dl class="facts">
+            <div><dt>Based in</dt><dd>Fremont, California</dd></div>
+            <div><dt>Education</dt><dd>B.S. Computer Science, SFBU</dd></div>
+            <div><dt>Strongest in</dt><dd>Python, pandas, scikit-learn</dd></div>
+            <div><dt>Originally from</dt><dd>Nepal</dd></div>
+          </dl>
+        </div>
+        <ol class="principles reveal" aria-label="How I work">
+          <li class="principle"><span class="principle-num">01</span><h3>Keep the data honest</h3><p>Preserve source provenance, flag ambiguous rows instead of silently deleting them, and treat missing dates as unknown rather than as zero.</p></li>
+          <li class="principle"><span class="principle-num">02</span><h3>Beat a baseline, in time order</h3><p>Split train, validation, and test chronologically, tune only on validation, and report results next to a simple baseline.</p></li>
+          <li class="principle"><span class="principle-num">03</span><h3>State the limits</h3><p>Publish error metrics with their evaluation scope, and say clearly what a model doesn't support.</p></li>
+          <li class="principle"><span class="principle-num">04</span><h3>Make it reproducible</h3><p>Version model artifacts, verify them before loading, and write tests around the inference path.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= Skills ================= -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">Skills</p>
+          <h2 id="skills-title">Technical toolkit</h2>
+          <p class="lede">These are tools I've used in my own projects and coursework on GitHub. Highlighted items are the ones I've used most.</p>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-group reveal">
+            <div class="skill-group-head"><span class="skill-icon" aria-hidden="true"><svg class="icon"><use href="#i-chart"/></svg></span><h3>Machine learning &amp; data</h3></div>
+            <p>Tabular ML, forecasting, and analysis</p>
+            <ul class="chips">
+              <li class="is-core">pandas</li><li class="is-core">scikit-learn</li><li class="is-core">NumPy</li>
+              <li>Random Forest</li><li>Gradient Boosting</li><li>Matplotlib</li><li>Seaborn</li><li>Jupyter</li><li>joblib</li>
+            </ul>
+          </article>
+          <article class="skill-group reveal">
+            <div class="skill-group-head"><span class="skill-icon" aria-hidden="true"><svg class="icon"><use href="#i-check"/></svg></span><h3>ML practices</h3></div>
+            <p>How I build and evaluate models</p>
+            <ul class="chips">
+              <li class="is-core">Feature engineering</li><li class="is-core">Chronological validation</li><li class="is-core">Baseline comparison</li>
+              <li>MAE / WAPE</li><li>Data validation</li><li>Model versioning</li><li>Missing-value handling</li>
+            </ul>
+          </article>
+          <article class="skill-group reveal">
+            <div class="skill-group-head"><span class="skill-icon" aria-hidden="true"><svg class="icon"><use href="#i-code"/></svg></span><h3>Languages &amp; web</h3></div>
+            <p>Languages I write code in</p>
+            <ul class="chips">
+              <li class="is-core">Python</li><li class="is-core">SQL</li><li>JavaScript</li><li>HTML</li><li>CSS</li><li>Bash</li><li>C / C++ (coursework)</li>
+            </ul>
+          </article>
+          <article class="skill-group reveal">
+            <div class="skill-group-head"><span class="skill-icon" aria-hidden="true"><svg class="icon"><use href="#i-tool"/></svg></span><h3>Tools &amp; platforms</h3></div>
+            <p>Testing, data storage, and delivery</p>
+            <ul class="chips">
+              <li class="is-core">Git &amp; GitHub</li><li class="is-core">pytest</li><li>MySQL</li><li>Linux</li><li>GitHub Pages</li>
+            </ul>
+          </article>
+        </div>
+        <p class="skills-note"><span class="swatch" aria-hidden="true"></span>Highlighted = used most in my projects</p>
+      </div>
+    </section>
+
+    <!-- ================= Projects ================= -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">Projects</p>
+          <h2 id="projects-title">Selected work</h2>
+          <p class="lede">Each project is labeled with its status and, for team work, the part I own.</p>
+        </div>
+
+        <!-- Featured: RestroPilot -->
+        <article class="project-feature reveal" aria-labelledby="p-restropilot">
+          <div class="project-feature-body">
+            <div class="project-meta-line"><span class="badge badge-accent">Featured</span><span class="badge">Team capstone</span><span class="badge">My role: ML development</span></div>
+            <h3 id="p-restropilot">RestroPilot: item-demand forecasting</h3>
+            <p class="project-desc">RestroPilot is a team capstone for restaurant operations. I own the machine-learning part: a Random Forest that forecasts each menu item's daily recorded quantity from historical takeaway orders.</p>
+            <ul class="feature-list">
+              <li>Cleaned and reconciled 194,001 order lines and 550 catalogue items from two restaurants, keeping source provenance and flagging ambiguous duplicates rather than dropping them.</li>
+              <li>Engineered 1/7/14/28-day lag and 7/28-day rolling-mean features using only past data. Training, validation, and test periods are split chronologically.</li>
+              <li>Cut test MAE from 5.569 to 4.172 units per scored item-day (about 25%) against a same-item previous-week baseline. Results are reported per item, with coverage of excluded days.</li>
+              <li>Packages the model as a versioned artifact with SHA-256 verification. The service refuses to load a missing or modified model.</li>
+            </ul>
+            <ul class="chips chips-sm" aria-label="Technologies">
+              <li>Python</li><li>pandas</li><li>NumPy</li><li>scikit-learn</li><li>joblib</li>
+            </ul>
+            <p class="scope-note"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg><span>Research model trained on 2017–2019 data. It predicts recorded quantities, not verified demand, and is not deployed to production. The team repository isn't public.</span></p>
+          </div>
+          <div class="pipeline-panel" aria-label="Forecasting workflow">
+            <p class="pipeline-title">Workflow</p>
+            <ol class="pipeline">
+              <li><span class="pipeline-step">1</span><div><strong>Clean &amp; reconcile</strong><span class="detail">4 source CSVs, restaurant-scoped item IDs, no fuzzy joins</span></div></li>
+              <li><span class="pipeline-step">2</span><div><strong>Engineer features</strong><span class="detail">Weekday, month, lags, rolling means</span></div></li>
+              <li><span class="pipeline-step">3</span><div><strong>Split chronologically</strong><span class="detail">Train 2017–18 · validate Q1 2019 · test Apr–Jul 2019</span></div></li>
+              <li><span class="pipeline-step">4</span><div><strong>Evaluate vs. baseline</strong><span class="detail">Aggregate &amp; per-item MAE / WAPE, duplicate sensitivity</span></div></li>
+              <li><span class="pipeline-step">5</span><div><strong>Version &amp; serve</strong><span class="detail">Hash-verified artifact for historical inference</span></div></li>
+            </ol>
+          </div>
+        </article>
+
+        <div class="project-grid">
+          <article class="project-card reveal" aria-labelledby="p-env">
+            <div class="project-media" aria-hidden="true">
+              <div class="media-tile">
+                <div class="notebook">
+                  <div class="notebook-head"><span class="window-dots"><i></i><i></i><i></i></span>APP201.ipynb</div>
+                  <div class="notebook-cell"><span class="n">[1]</span><span class="line mid"></span></div>
+                  <div class="notebook-cell"><span class="n">[2]</span><span class="line short"></span></div>
+                  <div class="notebook-cell"><span class="n">[3]</span><span class="bars"><i style="height:45%"></i><i style="height:80%"></i><i style="height:60%"></i><i style="height:95%"></i><i style="height:35%"></i><i style="height:70%"></i></span></div>
+                </div>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-line"><span class="badge">Academic</span><span class="badge">Prototype</span></div>
+              <h3 id="p-env">Bay Area environmental data analysis</h3>
+              <p class="project-desc">A Jupyter notebook exploring how pollution, socioeconomic, and asthma indicators vary across Bay Area counties.</p>
+              <ul class="feature-list">
+                <li>Missing-value handling and indicator selection</li>
+                <li>County comparisons and correlation visualizations</li>
+                <li>Random Forest and Gradient Boosting regression experiments</li>
+              </ul>
+              <ul class="chips chips-sm" aria-label="Technologies"><li>Python</li><li>pandas</li><li>Seaborn</li><li>scikit-learn</li></ul>
+              <div class="project-links">
+                <a class="link-arrow" href="https://github.com/Swagaat/App_2201" target="_blank" rel="noopener">Source<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                <span class="muted">Exploratory. Known issues are listed in the README.</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" aria-labelledby="p-nepal">
+            <div class="project-media"><img src="assets/nepal-preview.png" alt="Screenshot of the Nepal showcase: illustrated Himalayan peaks with the headline 'Small on the map. Endless in wonder.'" width="1200" height="800" loading="lazy" decoding="async"></div>
+            <div class="project-card-body">
+              <div class="project-meta-line"><span class="badge">Personal</span><span class="badge badge-accent">Live</span></div>
+              <h3 id="p-nepal">Interactive Nepal showcase</h3>
+              <p class="project-desc">My first HTML/CSS website, rebuilt as an illustrated introduction to Nepal with filters and a place explorer.</p>
+              <ul class="feature-list">
+                <li>Original SVG and CSS illustrations</li>
+                <li>Category filters and a keyboard-accessible schematic map</li>
+                <li>All content readable without JavaScript, and motion respects reduced-motion settings</li>
+              </ul>
+              <ul class="chips chips-sm" aria-label="Technologies"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>SVG</li></ul>
+              <div class="project-links">
+                <a class="link-arrow" href="nepal.html">Live demo<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                <a class="link-arrow" href="case-nepal.html">Case study<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                <a class="link-arrow" href="https://github.com/Swagaat/Swagaat.github.io/blob/main/nepal.html" target="_blank" rel="noopener">Source<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" aria-labelledby="p-calc">
+            <div class="project-media"><img src="assets/calculator-preview.png" alt="Screenshot of the browser calculator with a display and a grid of number and operator buttons" width="1200" height="800" loading="lazy" decoding="async"></div>
+            <div class="project-card-body">
+              <div class="project-meta-line"><span class="badge">Personal</span><span class="badge badge-accent">Live</span></div>
+              <h3 id="p-calc">Browser calculator</h3>
+              <p class="project-desc">A small JavaScript calculator where button clicks and keyboard input share the same state logic.</p>
+              <ul class="feature-list">
+                <li>Chained operations, decimal input, and a readable divide-by-zero message</li>
+                <li>Keyboard support: Enter calculates, Escape clears</li>
+                <li>Results rounded to 12 significant digits</li>
+              </ul>
+              <ul class="chips chips-sm" aria-label="Technologies"><li>JavaScript</li><li>DOM events</li><li>CSS Grid</li></ul>
+              <div class="project-links">
+                <a class="link-arrow" href="extra.html">Live demo<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                <a class="link-arrow" href="case-calculator.html">Case study<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                <a class="link-arrow" href="https://github.com/Swagaat/Swagaat.github.io/blob/main/script.js" target="_blank" rel="noopener">Source<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="more-work reveal">
+          <h3>More work &amp; coursework</h3>
+          <ul class="more-list">
+            <li><strong>ML &amp; pandas coursework</strong><p>Imputation, encoding, and scaling pipelines with SVC and decision-tree classifiers. Some notebooks are still in progress.</p><span class="more-links"><a class="link-arrow" href="https://github.com/Swagaat/HW-AI" target="_blank" rel="noopener">Source<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></span></li>
+            <li><strong>Data preparation coursework</strong><p>Missing values, joins, date parsing, aggregation, and time-series exercises in pandas.</p><span class="more-links"><a class="link-arrow" href="https://github.com/Swagaat/AI-Hw" target="_blank" rel="noopener">Source<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></span></li>
+            <li><strong>Geometry in the world</strong><p>A coursework page explaining spider-web geometry, with an adjustable SVG model.</p><span class="more-links"><a class="link-arrow" href="WEB.html">Demo<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="link-arrow" href="case-geometry.html">Case study<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></span></li>
+            <li><strong>Driving school database</strong><p>A MySQL relational schema for students, instructors, schedules, and registration, with scheduling queries.</p><span class="more-links"><span>Coursework · source not published</span></span></li>
+            <li><strong>Command-line Tic-Tac-Toe</strong><p>A two-player Bash game with turn logic and input validation.</p><span class="more-links"><span>Coursework · source not published</span></span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Experience & Education ================= -->
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">Experience</p>
+          <h2 id="experience-title">Experience &amp; education</h2>
+        </div>
+        <div class="timeline-grid">
+          <div class="timeline-col reveal">
+            <h3><svg class="icon" aria-hidden="true"><use href="#i-brief"/></svg>Projects &amp; leadership</h3>
+            <ol class="timeline">
+              <!-- Template for a future role, internship, or certification:
+              <li class="timeline-item">
+                <p class="timeline-when">Mon YYYY – Mon YYYY</p>
+                <h4>Job title</h4>
+                <p class="timeline-org">Company · City, State</p>
+                <ul><li>What you built or improved, and the verified result.</li></ul>
+              </li> -->
+              <li class="timeline-item">
+                <p class="timeline-when">2026</p>
+                <h4>ML developer, RestroPilot capstone</h4>
+                <p class="timeline-org">Team project · San Francisco Bay University</p>
+                <ul>
+                  <li>Responsible for the ML component: data cleaning, feature engineering, chronological evaluation, and model packaging.</li>
+                  <li>Wrote the original reproducible forecasting prototype, including baseline comparisons and pytest-covered inference.</li>
+                </ul>
+              </li>
+              <li class="timeline-item">
+                <p class="timeline-when">High school</p>
+                <h4>House Captain &amp; Class Leader</h4>
+                <p class="timeline-org">Uniglobe Higher Secondary School · Kathmandu, Nepal</p>
+                <ul>
+                  <li>Led a class of 10 students and helped organize a chess competition and an academic quiz.</li>
+                  <li>IT Club member.</li>
+                </ul>
+              </li>
+              <li class="timeline-item">
+                <p class="timeline-when">Volunteer</p>
+                <h4>Community service</h4>
+                <p class="timeline-org">Kathmandu, Nepal</p>
+                <ul><li>Volunteered in the Bagmati River cleanup campaign and a community book-donation program.</li></ul>
+              </li>
+            </ol>
+          </div>
+          <div class="timeline-col reveal">
+            <h3><svg class="icon" aria-hidden="true"><use href="#i-cap"/></svg>Education</h3>
+            <ol class="timeline">
+              <li class="timeline-item">
+                <p class="timeline-when">Graduation: August 2026</p>
+                <h4>B.S. Computer Science</h4>
+                <p class="timeline-org">San Francisco Bay University · Fremont, CA</p>
+                <ul>
+                  <li>Coursework repositories on GitHub cover data structures, databases, probability, machine learning, and data preparation.</li>
+                </ul>
+              </li>
+              <li class="timeline-item">
+                <p class="timeline-when">2019 – 2021</p>
+                <h4>Higher secondary (Grades XI–XII)</h4>
+                <p class="timeline-org">Uniglobe Higher Secondary School · Kathmandu, Nepal</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Contact ================= -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact-panel reveal">
+          <div>
+            <p class="kicker">Contact</p>
+            <h2 id="contact-title">Let's talk.</h2>
+            <p class="lede">If you're hiring for an entry-level software, AI, or ML role, or want to talk about one of these projects, email is the best way to reach me.</p>
+            <a class="contact-email" href="mailto:swagneupane@gmail.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>swagneupane@gmail.com</a>
+            <div class="contact-actions">
+              <a class="btn btn-primary" href="mailto:swagneupane@gmail.com?subject=Hello%20Swagat">Send an email</a>
+              <button class="btn btn-secondary" type="button" data-copy-email="swagneupane@gmail.com"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg>Copy address</button>
+            </div>
+            <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+          </div>
+          <ul class="contact-links">
+            <li><a href="https://github.com/Swagaat" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true"><svg class="icon"><use href="#i-github"/></svg></span><span><strong>GitHub</strong><small>github.com/Swagaat</small></span><svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+            <li><a href="https://drive.google.com/file/d/1HO9i_AqHCOgrL9knAAbPDF6hSDjnwh7z/view?usp=sharing" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true"><svg class="icon"><use href="#i-file"/></svg></span><span><strong>Resume</strong><small>View on Google Drive</small></span><svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+            <li><a href="https://github.com/Swagaat/Swagaat.github.io" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true"><svg class="icon"><use href="#i-code"/></svg></span><span><strong>This site's source</strong><small>HTML, CSS &amp; JavaScript</small></span><svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span data-year>2026</span> Swagat Neupane · Fremont, CA</span>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="https://github.com/Swagaat" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:swagneupane@gmail.com">Email</a>
+        <a href="https://drive.google.com/file/d/1HO9i_AqHCOgrL9knAAbPDF6hSDjnwh7z/view?usp=sharing" target="_blank" rel="noopener">Resume</a>
+        <a href="#home">Back to top ↑</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
